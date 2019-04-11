@@ -151,7 +151,7 @@
 {address: ‘niuugcpresident@gmail.com’,
 	address2: 'N/A',
 	org: ‘Northern Illinois University United Greek Council’,
-	type: ‘C’
+	type: ‘k’
 },
 {address: ‘niu.akdphi.president@gmail.com’,
 	address2: 'N/A',
@@ -226,7 +226,7 @@
 {address: ‘nphc.niu.president@gmail.com’,
 	address2: 'N/A',
 	org: ‘Northern Illinois University National Pan-Hellenic Council’,
-	type: ‘C’
+	type: ‘k’
 },
 {address: ‘deltaomicronaka1908@gmail.com’,
 	address2: 'N/A',
@@ -266,7 +266,7 @@
 {address: ‘mgc.depaul@gmail.com’,
 	address2: 'N/A',
 	org: ‘DePaul University Multicultural Greek Council’,
-	type: ‘C’
+	type: ‘k’
 },
 {address: ‘nurho1977@gmail.com’,
 	address2: 'N/A',
@@ -336,7 +336,7 @@
 {address: ‘lucmgc@gmail.com’,
 	address2: 'N/A',
 	org: ‘Loyola University Multicultural Greek Council’,
-	type: ‘C’
+	type: ‘k’
 },
 {address: ‘info@chicagoalphas.com’,
 	address2: 'N/A',
@@ -371,7 +371,7 @@
 {address: ‘uchicago.mgc.president@gmail.com’,
 	address2: 'N/A',
 	org: ‘University of Chicago Multicultural Greek Council’,
-	type: ‘C’
+	type: ‘k’
 },
 {address: ‘betachapteraka@gmail.com’,
 	address2: 'akabeta1913@gmail.com',
@@ -571,12 +571,12 @@
 {address1: ‘mgcpresident@greeklife.wisc.edu’,
 	address2: 'N/A',
 	org: ‘University of Wisconsin - Madison Multicultural Greek Council’,
-	type: ‘C’
+	type: ‘k’
 },
 {address: ‘nphcpresident@greeklife.wisc.edu’,
 	address2: 'N/A',
 	org: ‘University of Wisconsin - Madison Natural Panhellenic Council’,
-	type: ‘C’
+	type: ‘k’
 },
 {address1: ‘alphaalpha.president@slbcentral.com’,
 	address2: 'betaspurdue@gmail.com',
