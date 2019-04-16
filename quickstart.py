@@ -95,7 +95,7 @@ def main():
     # contents = chapter.read()
     # contents = council.read()
 
-    for contact in contacts:
+    for contact in contacts['orgs']:
       intro = 'Hello ' + contact['org']
       print(intro)
     # email = create_message('odphistep@gmail.com', 'rojaswestall@gmail.com', 'Stroll the Yard Competition', intro, contents)
