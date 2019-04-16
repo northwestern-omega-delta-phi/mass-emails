@@ -1,17 +1,25 @@
 from __future__ import print_function
 import pickle
 import os.path
+import json
 from googleapiclient.discovery import build
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
+from googleapiclient.errors import HttpError
 from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
+import base64
 
-html = open('./message.html', 'r')
+chapter_html = open('./chapter.html', 'r')
+council_html = open('./council.html', 'r')
+
+with open('contacts.json') as json_file:  
+    contacts = json.load(json_file)
 
 # If modifying these scopes, delete the file token.pickle.
-SCOPES = ['https://www.googleapis.com/auth/gmail.readonly']
+SCOPES = ['https://mail.google.com/']
 
-def create_message(sender, to, subject, message_text):
+def create_message(sender, to, subject, intro, message_text):
   """Create a message for an email.
 
   Args:
@@ -23,10 +31,17 @@ def create_message(sender, to, subject, message_text):
   Returns:
     An object containing a base64url encoded email object.
   """
-  message = MIMEText(message_text)
+  message = MIMEMultipart('alternative')
   message['to'] = to
   message['from'] = sender
   message['subject'] = subject
+
+  part1 = MIMEText(intro, 'plain')
+  part2 = MIMEText(message_text, 'html')
+
+  message.attach(part1)
+  message.attach(part2)
+
   return {'raw': base64.urlsafe_b64encode(message.as_string())}
 
 
@@ -47,7 +62,7 @@ def send_message(service, user_id, message):
                .execute())
     print ('Message Id: %s' % message['id'])
     return message
-  except (errors.HttpError, error):
+  except HttpError as error:
     print ('An error occurred: %s' % error)
 
 def main():
@@ -76,18 +91,15 @@ def main():
     service = build('gmail', 'v1', credentials=creds)
 
     ## Create message
-    email = create_message('odphistep@gmail.com', 'rojaswestall@gmail.com', 'TEST EMAIL', html.read())
-    send_message(service, "me", email)
-    # Call the Gmail API
-    # results = service.users().labels().list(userId='me').execute()
-    # labels = results.get('labels', [])
 
-    # if not labels:
-    #     print('No labels found.')
-    # else:
-    #     print('Labels:')
-    #     for label in labels:
-    #         print(label['name'])
+    # contents = chapter.read()
+    # contents = council.read()
+
+    for contact in contacts:
+      intro = 'Hello ' + contact['org']
+      print(intro)
+    # email = create_message('odphistep@gmail.com', 'rojaswestall@gmail.com', 'Stroll the Yard Competition', intro, contents)
+    # send_message(service, "me", email)
 
 if __name__ == '__main__':
     main()
