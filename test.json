@@ -1,0 +1,30 @@
+{
+    "orgs": [
+      {
+        "address1": "rojaswestall@gmail.com",
+        "address2": "N/A",
+        "org": "Omega Delta Phi",
+        "type": "f"
+      },
+      {
+        "address1": "nwu.kpl@gmail.com",
+        "address2": "N/A",
+        "org": "Kappa Phi Lambda",
+        "type": "s"
+      },
+      {
+        "address1": "rojaswestall@u.northwestern.edu",
+        "address2": "N/A",
+        "org": "Alpha Psi Lambda",
+        "type": "c"
+      }
+    ],
+    "councils": [
+      {
+        "address1": "rojaswestall@gmail.com",
+        "address2": "nu.odphi@gmail.com",
+        "org": "Northwestern MGC",
+        "type": "k"
+      }
+    ]
+  }
