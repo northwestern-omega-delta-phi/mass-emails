@@ -11,7 +11,7 @@ from email.mime.multipart import MIMEMultipart
 import base64
 import time
 
-sender_email = 'odphistep@gmail.com'
+sender_email = 'nwukpl@gmail.com'
 
 chapter_html = open('./chapter.html', 'r')
 council_html = open('./council.html', 'r')
